@@ -181,7 +181,7 @@ function generateDashboardHtml(statuses, generatedAt) {
 </html>`;
 }
 export function createHealthMonitorServer(options) {
-    const { db, latencyThreshold, startupGraceSeconds, configPath, healthConfigPath, manualServersPath } = options;
+    const { db, latencyThreshold, startupGraceSeconds, configPath, healthConfigPath, manualServersPath, } = options;
     const getAllServers = () => mergeManualServers(discoverServers(configPath), manualServersPath);
     let healthConfig = loadHealthConfig(healthConfigPath);
     // Cancellation flag for health_check_all
