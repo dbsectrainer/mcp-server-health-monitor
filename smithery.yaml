@@ -1,0 +1,29 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      dbPath:
+        type: string
+        description: "Path to SQLite database file"
+      latencyThreshold:
+        type: number
+        description: "Latency threshold in milliseconds for health checks"
+      mcpConfigPath:
+        type: string
+        description: "Path to MCP server configuration file"
+      healthConfigPath:
+        type: string
+        description: "Path to health check configuration file"
+    required: []
+  commandFunction: |
+    (config) => ({
+      command: "node",
+      args: [
+        "dist/index.js",
+        ...(config.dbPath ? ["--db", config.dbPath] : []),
+        ...(config.latencyThreshold ? ["--latency-threshold", String(config.latencyThreshold)] : []),
+        ...(config.mcpConfigPath ? ["--mcp-config-path", config.mcpConfigPath] : []),
+        ...(config.healthConfigPath ? ["--health-config", config.healthConfigPath] : [])
+      ]
+    })
