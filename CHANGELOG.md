@@ -5,6 +5,20 @@ All notable changes to MCP Server Health Monitor will be documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.0.0 (2026-03-23)
+
+
+### Features
+
+* add mcpName for official MCP registry publication ([4d9600f](https://github.com/dbsectrainer/mcp-server-health-monitor/commit/4d9600f336a66611425f974282a6bafa8b0e9378))
+* add server.json for official MCP registry ([03f2ba8](https://github.com/dbsectrainer/mcp-server-health-monitor/commit/03f2ba8eae8365604245228ffeb5430b123a4994))
+* initial release v1.0.0 ([41ffc06](https://github.com/dbsectrainer/mcp-server-health-monitor/commit/41ffc0616ef6665f838ac5fe9083acf0b8d397d5))
+
+
+### Bug Fixes
+
+* **ci:** lower coverage thresholds and add smithery.yaml ([4e3bc0d](https://github.com/dbsectrainer/mcp-server-health-monitor/commit/4e3bc0d0c1d781c1b3b73a435baef2cacbed528a))
+
 ## [Unreleased]
 
 ## [0.2.1] - 2026-03-23
