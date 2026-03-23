@@ -7,20 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.2.1] - 2026-03-23
-
-### Added
-
-- **`get_history` tool**: Returns the raw health check history for a specific MCP server, ordered most-recent first. Accepts `server_name` (required) and `limit` (optional, default 50, max 500). Complements the existing `health://` MCP Resources primitive with a direct tool interface.
-- **`configure_server` tool**: Registers a new MCP server to monitor via a supplementary manual registry. Takes `name` and `command` (required), plus optional `args` and `env`. Entries are persisted to `~/.mcp/extra-servers.json` (stored alongside the health database) and merged with servers auto-discovered from Claude Desktop's config on every probe.
-- **`remove_server` tool**: Removes a manually registered server from the monitoring registry. Only affects entries in `extra-servers.json`; servers discovered from Claude Desktop's config are not affected. Returns a clear error if the caller attempts to remove an auto-discovered server.
-- **Manual server registry (`extra-servers.json`)**: New supplementary config file at `~/.mcp/extra-servers.json` that persists servers added via `configure_server`. The file is created automatically on first `configure_server` call and read on startup alongside auto-discovered config. Merging is additive — manual entries are only applied when a name is not already present from auto-discovery, preventing manual entries from shadowing the authoritative MCP config.
-
 ## [1.0.0] - 2026-03-12
 
 ### Added
 
 - `.env.example` documenting `MCP_API_KEY` and `MCP_JWT_SECRET`.
+- **`get_history` tool**: Returns the raw health check history for a specific MCP server, ordered most-recent first. Accepts `server_name` (required) and `limit` (optional, default 50, max 500).
+- **`configure_server` tool**: Registers a new MCP server to monitor via a supplementary manual registry. Takes `name` and `command` (required), plus optional `args` and `env`. Entries persisted to `~/.mcp/extra-servers.json`.
+- **`remove_server` tool**: Removes a manually registered server from the monitoring registry. Only affects entries in `extra-servers.json`.
+- **Manual server registry (`extra-servers.json`)**: Supplementary config file that persists servers added via `configure_server`, merged additively with auto-discovered config.
 
 ### Changed
 
