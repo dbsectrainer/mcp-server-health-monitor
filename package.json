@@ -1,5 +1,6 @@
 {
   "name": "mcp-server-health-monitor",
+  "mcpName": "io.github.dbsectrainer/mcp-server-health-monitor",
   "version": "1.0.0",
   "description": "Health monitoring for all your MCP servers",
   "author": "dbsectrainer",
