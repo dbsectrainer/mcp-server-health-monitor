@@ -1,16 +1,16 @@
 export interface RestartResult {
-    success: boolean;
-    pid?: number;
-    error?: string;
-    attempt: number;
+  success: boolean;
+  pid?: number;
+  error?: string;
+  attempt: number;
 }
 export interface ServerConfig {
-    name: string;
-    command: string;
-    args?: string[];
-    auto_restart?: boolean;
-    restart_max_attempts?: number;
-    restart_backoff_ms?: number;
+  name: string;
+  command: string;
+  args?: string[];
+  auto_restart?: boolean;
+  restart_max_attempts?: number;
+  restart_backoff_ms?: number;
 }
 /**
  * Attempts to restart a server process.
@@ -22,4 +22,7 @@ export interface ServerConfig {
  * @param serverConfig - Configuration for the server to restart.
  * @param attempt      - Current attempt number (1-based).
  */
-export declare function tryRestart(serverConfig: ServerConfig, attempt: number): Promise<RestartResult>;
+export declare function tryRestart(
+  serverConfig: ServerConfig,
+  attempt: number,
+): Promise<RestartResult>;

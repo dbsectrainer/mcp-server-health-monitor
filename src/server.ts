@@ -245,7 +245,14 @@ function generateDashboardHtml(
 }
 
 export function createHealthMonitorServer(options: HealthMonitorOptions): Server {
-  const { db, latencyThreshold, startupGraceSeconds, configPath, healthConfigPath, manualServersPath } = options;
+  const {
+    db,
+    latencyThreshold,
+    startupGraceSeconds,
+    configPath,
+    healthConfigPath,
+    manualServersPath,
+  } = options;
 
   const getAllServers = () => mergeManualServers(discoverServers(configPath), manualServersPath);
 

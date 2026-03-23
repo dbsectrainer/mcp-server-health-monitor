@@ -1,9 +1,9 @@
 export interface DependencyGraph {
-    nodes: string[];
-    edges: Array<{
-        from: string;
-        to: string;
-    }>;
+  nodes: string[];
+  edges: Array<{
+    from: string;
+    to: string;
+  }>;
 }
 /**
  * Loads the dependency graph from a YAML file.
@@ -29,4 +29,7 @@ export declare function loadDependencyGraph(filePath?: string): DependencyGraph;
  * @param graph        - The dependency graph to render.
  * @param healthStatus - Map of server name → status string.
  */
-export declare function renderDependencyDot(graph: DependencyGraph, healthStatus: Record<string, string>): string;
+export declare function renderDependencyDot(
+  graph: DependencyGraph,
+  healthStatus: Record<string, string>,
+): string;
