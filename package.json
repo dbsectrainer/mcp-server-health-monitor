@@ -39,10 +39,10 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.12.0",
-    "better-sqlite3": "^12.0.0",
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "better-sqlite3": "^12.11.1",
     "express": "^5.2.1",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.3.2"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.8",
@@ -50,14 +50,14 @@
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^24.12.0",
     "@types/yargs": "^17.0.32",
-    "@typescript-eslint/eslint-plugin": "^8.57.0",
-    "@typescript-eslint/parser": "^8.57.0",
-    "@vitest/coverage-v8": "^4.1.0",
-    "eslint": "^10.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.70.1",
+    "@typescript-eslint/parser": "^8.70.1",
+    "@vitest/coverage-v8": "^4.1.11",
+    "eslint": "^10.11.0",
     "prettier": "^3.8.1",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3",
-    "vitest": "^4.1.0",
+    "vitest": "^4.1.11",
     "yargs": "^18.0.0"
   },
   "engines": {
